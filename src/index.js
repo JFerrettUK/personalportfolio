@@ -1,3 +1,4 @@
 import "./style.css";
+import dropdown from "./dropdownMenu/dropdown.js";
 
-console.log("test2");
+dropdown();

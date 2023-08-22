@@ -1,13 +1,11 @@
-@media only screen and (max-height: 600px) {
-  body,
-  html {
-    overflow: auto;
-    height: 100%;
-  }
-
-  .footerCont {
-    display: none;
-  }
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Roboto";
+  font-size: 22px;
+  overflow: hidden;
 }
 
 html {
@@ -21,18 +19,8 @@ html {
   color: rgb(72, 78, 85);
 }
 
-body,
-html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  font-family: "Roboto";
-  font-size: 22px;
-  overflow: hidden;
-}
-
 .header {
-  color: #fff;
+  color: #ffffff;
   padding: 20px;
   text-align: center;
 }
@@ -40,9 +28,23 @@ html {
 .headerCont {
   height: 65px;
   display: grid;
-  grid-template-columns: 4fr 0.5fr 0.5fr 0.5fr;
+  justify-content: center;
   background-color: #ffffff;
   color: #21364e;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  font-size: large;
+  font-weight: 800;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.headerCont2 {
+  height: 65px;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr 1fr;
+  background-color: #21364e;
+  color: #ffffff;
   width: 100%;
   align-items: center;
   text-align: center;
@@ -56,10 +58,12 @@ html {
   height: 65px;
 }
 
-.about,
-.projects,
-.contact {
+.headerText {
   min-width: 100px;
+  height: 65px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .glass {
@@ -85,7 +89,12 @@ html {
   margin-left: 5px;
 }
 
+.splashImgCont:hover {
+  cursor: pointer;
+}
+
 .meStuff {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -167,4 +176,101 @@ html {
 .button-27:active {
   box-shadow: none;
   transform: translateY(0);
+}
+
+.dropdown-container {
+  display: none;
+  text-align: center;
+  line-height: 50px;
+  font-size: large;
+  color: rgb(247, 247, 247);
+  cursor: pointer;
+}
+
+.menu-title {
+  background-color: #21364e;
+}
+
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(99, 97, 97);
+  display: none;
+}
+
+ul.dropdown-menu li:hover {
+  background-color: #ffffff;
+  color: #21364e;
+}
+
+.visible {
+  display: block;
+  transform-origin: top;
+}
+
+@keyframes dropandbounce {
+  0% {
+    transform: scaleY(0);
+  }
+
+  70% {
+    transform: scaleY(1.1);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+.bottomCont {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: auto;
+  bottom: 140px;
+  font-size: small;
+  width: 100vw;
+}
+
+@media only screen and (max-height: 920px) {
+  body,
+  html {
+    overflow: auto;
+  }
+
+  .footerCont {
+    display: none;
+  }
+
+  .headerCont2 {
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+  }
+
+  .dropdown-container {
+    display: block;
+  }
+
+  .glass {
+    position: fixed;
+    top: 115px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .splashCont {
+    padding: 5px;
+    padding-top: 10%;
+    height: auto;
+    display: grid;
+  }
+
+  .splashImg {
+    margin-top: 30px;
+    height: 205px;
+    width: 295px;
+  }
 }
