@@ -62,8 +62,10 @@ html {
   min-width: 100px;
   height: 65px;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
 }
 
 .glass {
@@ -78,7 +80,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 85vh;
 }
 
 .splashImg {
@@ -222,6 +224,7 @@ ul.dropdown-menu li:hover {
     transform: scaleY(1);
   }
 }
+
 .bottomCont {
   display: flex;
   justify-content: center;
@@ -238,7 +241,8 @@ ul.dropdown-menu li:hover {
     overflow: auto;
   }
 
-  .footerCont {
+  .footerCont,
+  .bottomText {
     display: none;
   }
 
@@ -272,5 +276,9 @@ ul.dropdown-menu li:hover {
     margin-top: 30px;
     height: 205px;
     width: 295px;
+  }
+
+  a {
+    text-decoration: none;
   }
 }
