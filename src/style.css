@@ -4,7 +4,6 @@ html {
   width: 100%;
   margin: 0;
   font-family: "Roboto";
-  font-size: 22px;
   overflow: hidden;
 }
 
@@ -117,6 +116,7 @@ html {
   margin: 10px;
   margin-bottom: 20px;
   font-weight: 500;
+  font-size: large;
 }
 
 .footerCont {
@@ -235,7 +235,7 @@ ul.dropdown-menu li:hover {
   width: 100vw;
 }
 
-@media only screen and (max-height: 920px) {
+@media only screen and (max-width: 920px) {
   body,
   html {
     overflow: auto;
@@ -281,4 +281,72 @@ ul.dropdown-menu li:hover {
   a {
     text-decoration: none;
   }
+
+  .aboutCont .aboutBox {
+    margin: 20px;
+  }
+
+  .aboutCont {
+    padding-top: 0; /* This will override the padding-top for screens with max-width: 920px */
+  }
+
+  .langs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.aboutCont {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.aboutBox {
+  background-color: #ffffff;
+  max-width: 650px;
+  border-radius: 20px;
+  padding: 2em;
+  padding-top: 2em;
+}
+
+.aboutTop {
+  font-size: xx-large;
+  font-weight: 800;
+}
+
+.text {
+  margin-bottom: 20px;
+}
+
+.about {
+  font-size: large;
+}
+
+.langs {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+.lang {
+  display: grid;
+  justify-content: center;
+}
+
+.lang_icon {
+  display: flex;
+  margin-top: 15px;
+  height: 50px;
+  width: 100px;
+}
+
+.langText {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
