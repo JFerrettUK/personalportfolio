@@ -1,4 +1,4 @@
 import "./style.css";
-import dropdown from "./dropdownMenu/dropdown.js";
+import dropdown from "./javascript/dropdown.js";
 
 dropdown();
