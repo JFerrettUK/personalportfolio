@@ -56,8 +56,10 @@ html {
 }
 
 .logo {
-  background: url("logo.png") no-repeat center center fixed;
+  background: url("logo.png");
   height: 65px;
+  width: 65px;
+  background-size: cover;
 }
 
 .headerText {
@@ -76,6 +78,24 @@ html {
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0 1px 12px rgba(255, 255, 255, 0.3);
+}
+
+.overlay.glass {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 1px 12px rgba(255, 255, 255, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Place it behind other content */
+}
+
+/* Style the content container */
+.content-container {
+  position: relative; /* Ensure the overlay is positioned within this container */
+  z-index: 1; /* Place it above the background */
 }
 
 .projectGlass {
@@ -233,7 +253,7 @@ html {
   justify-content: center;
   position: absolute;
   width: auto;
-  bottom: 140px;
+  bottom: 10px;
   font-size: small;
   width: 100vw;
 }
@@ -329,6 +349,7 @@ ul.dropdown-menu li:hover {
 
 .aboutText {
   color: #304f72;
+  font-size: large;
 }
 
 .button-28 {
@@ -460,10 +481,6 @@ a {
       box-shadow: 0 1px 12px rgba(255, 255, 255, 0.3);
       z-index: -1;
     }
-
-    .aboutCont .projectBox {
-      margin-top: 180px;
-    }
   }
 }
 
@@ -535,4 +552,12 @@ a {
 
 .overflow-auto {
   overflow: auto;
+}
+
+.projectImageBattleship {
+  background: url("battleship.png");
+  width: 308px;
+  height: 182px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
