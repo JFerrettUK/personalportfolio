@@ -414,7 +414,6 @@ ul.dropdown-menu li:hover {
   border: 1px solid #ddd;
   padding: 20px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-
   text-align: center;
 }
 
@@ -554,10 +553,35 @@ a {
   overflow: auto;
 }
 
-.projectImageBattleship {
+.imgProjCont {
+  display: flex;
+  justify-content: center;
+}
+
+.battleshipImage {
   background: url("battleship.png");
-  width: 308px;
-  height: 182px;
-  background-size: contain;
+}
+
+.dealerPortalImage {
+  background: url("dealerportal.png");
+}
+
+.todoListImage {
+  background: url("todolist.png");
+}
+
+.weatherAppImage {
+  background: url("weatherapp.png");
+}
+
+.cvBuilderImage {
+  background: url("cvbuilder.png");
+}
+
+.projectImage {
+  width: 100%;
+  padding-top: 58.33%; /* (image-height / image-width) * 100% */
+  background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
